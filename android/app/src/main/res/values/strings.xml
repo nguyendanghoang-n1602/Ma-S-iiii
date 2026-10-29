@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Lang Soi</string>
+    <string name="title_activity_main">Lang Soi</string>
+    <string name="package_name">com.langsoi.werewolf</string>
+    <string name="custom_url_scheme">com.langsoi.werewolf</string>
+</resources>

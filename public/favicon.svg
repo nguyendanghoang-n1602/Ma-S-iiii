@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#312e81" />
+      <stop offset="60%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </radialGradient>
+    <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="100%" stop-color="#eab308" />
+    </linearGradient>
+    <linearGradient id="wolfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="url(#bgGlow)" stroke="#facc15" stroke-width="1.5" stroke-opacity="0.4" />
+
+  <!-- Moon in background -->
+  <circle cx="58" cy="40" r="24" fill="url(#moonGrad)" filter="url(#glow)" opacity="0.85" />
+  <circle cx="64" cy="38" r="22" fill="#1e1b4b" opacity="0.75" />
+
+  <!-- Howling Wolf Silhouette -->
+  <path d="M 28 85 
+           C 30 75, 34 68, 38 60 
+           C 36 54, 38 46, 42 42 
+           C 40 38, 41 32, 45 28 
+           C 47 25, 52 23, 56 22 
+           C 54 26, 55 30, 52 35 
+           C 57 33, 62 36, 60 41 
+           C 56 43, 52 46, 50 51 
+           C 53 54, 57 58, 62 65 
+           C 65 70, 72 78, 75 85 Z" 
+        fill="url(#wolfGrad)" />
+
+  <!-- Wolf Glowing Eye -->
+  <circle cx="48" cy="34" r="2.2" fill="#ef4444" filter="url(#glow)" />
+
+  <!-- Foreground Fog -->
+  <path d="M 12 85 Q 30 78, 50 84 T 88 85 L 88 95 L 12 95 Z" fill="#090d16" opacity="0.9" />
+</svg>
